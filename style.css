@@ -220,3 +220,47 @@ code {
   .btn, button.btn, label.btn { width: 100%; justify-content: center; }
   input[type="text"], input[type="number"], select { width: 100%; }
 }
+
+/* ---------- Панель инструментов изображения ---------- */
+.tools {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 12px;
+  background: #f9fafb;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  margin-bottom: 12px;
+}
+
+.tools-label {
+  font-size: .85rem;
+  color: var(--muted);
+  font-weight: 600;
+  margin-right: 2px;
+}
+
+.tools-value {
+  font-size: .85rem;
+  color: var(--text);
+  font-variant-numeric: tabular-nums;
+  min-width: 42px;
+  font-weight: 600;
+}
+
+.btn-sm {
+  padding: 6px 12px;
+  font-size: .85rem;
+}
+
+/* Слайдер угла поворота компактнее */
+.tools input[type="range"] {
+  width: 160px;
+  vertical-align: middle;
+}
+
+@media (max-width: 600px) {
+  .tools { gap: 6px; }
+  .tools input[type="range"] { width: 100%; }
+}
