@@ -96,27 +96,41 @@
     </section>
 
     <!-- 3. Рабочая область -->
-    <section class="card">
-      <h2>4. Выделите область и обрежьте</h2>
+<section class="card">
+  <h2>4. Выделите область и обрежьте</h2>
 
-      <div id="imageContainer">
-        <img id="image" alt="Изображение для обрезки">
-      </div>
+  <!-- Инструменты изображения -->
+  <div class="tools">
+    <span class="tools-label">Поворот:</span>
+    <button type="button" class="btn btn-secondary btn-sm" id="rotateLeft"  title="Повернуть влево">↺ 90°</button>
+    <button type="button" class="btn btn-secondary btn-sm" id="rotateRight" title="Повернуть вправо">↻ 90°</button>
+    <input type="range" id="rotateRange" min="-180" max="180" value="0" step="1" title="Точный угол">
+    <span class="tools-value" id="rotateValue">0°</span>
 
-      <div class="buttons">
-        <button id="cropBtn" class="btn btn-primary" disabled>✂️ Обрезать</button>
+    <span class="tools-label">Отражение:</span>
+    <button type="button" class="btn btn-secondary btn-sm" id="flipH" title="Отразить по горизонтали">⇆ Гориз.</button>
+    <button type="button" class="btn btn-secondary btn-sm" id="flipV" title="Отразить по вертикали">⇅ Верт.</button>
 
-        <div class="field" id="filenameField" hidden>
-          <label for="filenameInput">Имя файла (без расширения)</label>
-          <input type="text" id="filenameInput" value="crop">
-        </div>
+    <button type="button" class="btn btn-secondary btn-sm" id="resetImage" title="Сбросить поворот и отражение">⟲ Сбросить</button>
+  </div>
 
-        <a id="downloadLink" class="btn btn-success" download="crop.jpg" hidden>💾 Сохранить</a>
-      </div>
+  <div id="imageContainer">
+    <img id="image" alt="Изображение для обрезки">
+  </div>
 
-      <p class="hint" id="sizeHint" hidden></p>
-    </section>
-  </main>
+  <div class="buttons">
+    <button id="cropBtn" class="btn btn-primary" disabled>✂️ Обрезать</button>
+
+    <div class="field" id="filenameField" hidden>
+      <label for="filenameInput">Имя файла (без расширения)</label>
+      <input type="text" id="filenameInput" value="crop">
+    </div>
+
+    <a id="downloadLink" class="btn btn-success" download="crop.jpg" hidden>💾 Сохранить</a>
+  </div>
+
+  <p class="hint" id="sizeHint" hidden></p>
+</section>
 
   <footer>
     <p>Сделано с ❤️ для веб-разработчиков. <a href="https://github.com/ВАШ_НИК/photo-cropper">GitHub</a></p>
